@@ -1,11 +1,10 @@
 package nl.mumasoft.jadvanced.trywithresources;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Drawer implements AutoCloseable
 {
-	private final Set<String> articles = new HashSet<>();
+	private Set<String> articles = new HashSet<>();
 	private boolean open = true;
 
 	public void add(String name)
@@ -23,5 +22,17 @@ public class Drawer implements AutoCloseable
 	public boolean isOpen()
 	{
 		return open;
+	}
+
+	public int size()
+	{
+		return articles.size();
+	}
+
+	public String articlesAsString()
+	{
+		var list = new ArrayList<>(articles);
+		list.sort(String.CASE_INSENSITIVE_ORDER);
+		return String.join(", ", list);
 	}
 }
