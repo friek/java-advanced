@@ -21,10 +21,10 @@ public class Scheduler
 
 	public List<Task> execute()
 	{
-		final var executed = new ArrayList<Task>();
-		tasks.forEach(t -> {
-			t.execute();
-			executed.add(t);
+		var executed = new ArrayList<Task>();
+		tasks.forEach(task -> {
+			task.execute();
+			executed.add(task);
 		});
 
 		return executed;
