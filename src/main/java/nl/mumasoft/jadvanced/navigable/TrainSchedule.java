@@ -24,7 +24,6 @@ public class TrainSchedule
 	public LocalTime getTimeBefore(LocalTime time)
 	{
 		return schedule.lower(time);
-
 	}
 
 	public LocalTime getTimeAfter(LocalTime time)
