@@ -6,11 +6,11 @@ public class SkiStore
 
 	public double rent(Skies skies)
 	{
-		return this.skiService.rent(skies);
+		return skiService.rent(skies);
 	}
 
 	public boolean checkForDamage(Skies skies)
 	{
-		return this.skiService.checkForDamage(skies);
+		return skiService.checkForDamage(skies);
 	}
 }
