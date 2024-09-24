@@ -17,6 +17,11 @@ public class CalculateSquares
 		Arrays.stream(intList).forEach(i -> System.out.println("Square of " + i + " is " + square.apply(i)));
 	}
 
+	/**
+	 * Bonus question 1: IntUnaryOperator <-> Square
+	 * @param intList List of ints
+	 * @param square  The function to apply
+	 */
 	private static void applyFunctionWithUnaryOperator(int[] intList, IntUnaryOperator square)
 	{
 		Arrays.stream(intList).forEach(i -> System.out.println("Square of " + i + " is " + square.applyAsInt(i)));
