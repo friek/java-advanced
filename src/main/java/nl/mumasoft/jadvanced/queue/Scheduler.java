@@ -1,13 +1,10 @@
 package nl.mumasoft.jadvanced.queue;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 public class Scheduler
 {
-	private final ArrayDeque<Task> tasks = new ArrayDeque<>();
+	private final Deque<Task> tasks = new ArrayDeque<>();
 
 	public void add(Task t)
 	{
