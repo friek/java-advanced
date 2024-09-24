@@ -18,6 +18,7 @@ public class TrainSchedule
 				LocalTime.of(13, 15),
 				LocalTime.of(16, 30)
 		));
+
 	}
 
 	public LocalTime getTimeBefore(LocalTime time)
@@ -29,5 +30,10 @@ public class TrainSchedule
 	public LocalTime getTimeAfter(LocalTime time)
 	{
 		return schedule.higher(time);
+	}
+
+	public NavigableSet<LocalTime> getSchedule()
+	{
+		return schedule;
 	}
 }
