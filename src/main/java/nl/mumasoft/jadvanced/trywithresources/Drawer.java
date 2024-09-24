@@ -16,8 +16,8 @@ public class Drawer implements AutoCloseable
 	@Override
 	public void close()
 	{
-		System.out.println("Drawer is successfully closed");
 		open = false;
+		System.out.println("Drawer is successfully closed");
 	}
 
 	public boolean isOpen()
