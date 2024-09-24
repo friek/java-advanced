@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class Drawer implements AutoCloseable
 {
-	private Set<String> articles = new HashSet<>();
+	private final Set<String> articles = new HashSet<>();
 	private boolean open = true;
 
 	public void add(String name)
