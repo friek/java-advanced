@@ -12,7 +12,8 @@ public class Shapes
 		List<Shape> shapes = List.of(
 				ShapeFactory.createCircle(5),
 				ShapeFactory.createSquare(5),
-				ShapeFactory.createTriangle(4, 5)
+				ShapeFactory.createTriangle(4, 5),
+				ShapeFactory.createRectangle(4, 7)
 		);
 
 		double totalArea = shapes.stream().mapToDouble(Shape::area).sum();

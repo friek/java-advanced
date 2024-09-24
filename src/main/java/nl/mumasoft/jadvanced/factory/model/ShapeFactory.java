@@ -20,4 +20,9 @@ public class ShapeFactory
 	{
 		return new Triangle(base, height);
 	}
+
+	public static Shape createRectangle(double width, double height)
+	{
+		return new Rectangle(width, height);
+	}
 }
