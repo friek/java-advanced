@@ -16,7 +16,11 @@ public class BinarySearch
 			System.out.print("Enter a score to search for: ");
 			score = scanner.nextInt();
 
-			System.out.println("Index of " + score + " is " + Arrays.binarySearch(scores, score));
+			int pos = Arrays.binarySearch(scores, score);
+			if (pos < 0)
+				System.out.println("Score " + score + " not found. It should be inserted at index: " + (pos * -1 - 1));
+			else
+				System.out.println("Score " + score + " found at index: " + pos);
 		}
 	}
 }
