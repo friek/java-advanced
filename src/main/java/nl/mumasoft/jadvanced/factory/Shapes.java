@@ -3,7 +3,6 @@ package nl.mumasoft.jadvanced.factory;
 import nl.mumasoft.jadvanced.factory.model.Shape;
 import nl.mumasoft.jadvanced.factory.model.ShapeFactory;
 
-import java.util.List;
 import java.util.stream.Stream;
 
 public class Shapes
