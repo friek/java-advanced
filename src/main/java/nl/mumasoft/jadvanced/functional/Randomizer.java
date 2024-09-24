@@ -24,7 +24,7 @@ public class Randomizer
 	{
 		return s.chars()
 				.mapToObj(i -> (char) i)
-				.sorted((a, b) -> Math.random() > 0.5 ? 1 : -1)
+				.sorted((_, _) -> Math.random() > 0.5 ? 1 : -1)
 				.collect(StringBuilder::new, StringBuilder::append, StringBuilder::append)
 				.toString();
 	}
