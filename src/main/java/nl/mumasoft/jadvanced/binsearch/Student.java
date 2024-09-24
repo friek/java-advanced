@@ -17,17 +17,8 @@ public class Student implements Comparable<Student>
 	@Override
 	public int compareTo(Student o)
 	{
-		return Integer.compare(score, o.score);
+//		Integer.compare(score, o.score);
+		// Alternatief:
+		return score - o.score;
 	}
-
-//	@Override
-//	public int compareTo(Object o)
-//	{
-//		if (o instanceof Student other)
-//		{
-//			return Integer.compare(score, other.score);
-//		}
-//
-//		throw new IllegalArgumentException("Can only compare to other Student objects");
-//	}
 }
