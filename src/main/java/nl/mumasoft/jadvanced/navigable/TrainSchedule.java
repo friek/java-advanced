@@ -12,10 +12,12 @@ public class TrainSchedule
 	public TrainSchedule()
 	{
 		// add some times
-		schedule.addAll(Arrays.asList(LocalTime.of(10, 30, 0),
-				LocalTime.of(9, 30, 0),
-				LocalTime.of(13, 15, 0),
-				LocalTime.of(16, 30, 0)));
+		schedule.addAll(Arrays.asList(
+				LocalTime.of(10, 30),
+				LocalTime.of(9, 30),
+				LocalTime.of(13, 15),
+				LocalTime.of(16, 30)
+		));
 	}
 
 	public LocalTime getTimeBefore(LocalTime time)

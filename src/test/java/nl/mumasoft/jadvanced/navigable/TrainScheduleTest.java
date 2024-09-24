@@ -20,7 +20,7 @@ class TrainScheduleTest
 	@Test
 	void testTimeAfter()
 	{
-		assertEquals(LocalTime.of(16, 0, 0),
-				trainSchedule.getTimeAfter(LocalTime.of(13, 15, 0)));
+		assertEquals(LocalTime.of(16, 30),
+				trainSchedule.getTimeAfter(LocalTime.of(14, 0)));
 	}
 }
