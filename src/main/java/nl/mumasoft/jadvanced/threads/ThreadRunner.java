@@ -12,7 +12,7 @@ public class ThreadRunner
 		var list = new ArrayList<String>();
 		var futures = new ArrayList<Future<String>>();
 		var results = new ArrayList<String>();
-		int listSize = 100;
+		int listSize = 1000;
 		try (var executor = Executors.newCachedThreadPool())
 		{
 			// this will enforce a failure as ArrayList is not thread safe
@@ -37,7 +37,7 @@ public class ThreadRunner
 		if (failures > 0)
 			System.err.println(listSize - list.size() + " failures in list additions");
 
-		System.out.println(String.join(", ", list));
-		System.out.println(String.join(", ", results));
+		System.out.println("In list: " + String.join(", ", list));
+		System.out.println("Actual results: " + String.join(", ", results));
 	}
 }
