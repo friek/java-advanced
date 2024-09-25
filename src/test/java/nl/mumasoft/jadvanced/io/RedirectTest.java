@@ -32,6 +32,7 @@ class RedirectTest
 		}
 		finally
 		{
+			// Restore the original System.out
 			System.setOut(console);
 		}
 
