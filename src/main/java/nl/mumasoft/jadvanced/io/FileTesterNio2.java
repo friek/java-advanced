@@ -3,6 +3,7 @@ package nl.mumasoft.jadvanced.io;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Arrays;
 
 public class FileTesterNio2
 {
@@ -17,7 +18,9 @@ public class FileTesterNio2
 
 	private static void createFile() throws IOException
 	{
-		Files.writeString(OUTPUT_FILE, String.join("\n", "Wienerschnitzel", "Boerenkool", "Frikandel speciaal"));
+		Files.write(OUTPUT_FILE, Arrays.asList("Wienerschnitzel", "Boerenkool", "Frikandel speciaal"));
+		// Alternative (doesn't append an enter on the last line):
+//		Files.writeString(OUTPUT_FILE, String.join("\n", "Wienerschnitzel", "Boerenkool", "Frikandel speciaal"));
 	}
 
 	private static void readFile() throws IOException
