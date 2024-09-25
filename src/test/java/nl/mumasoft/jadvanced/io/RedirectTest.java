@@ -13,6 +13,7 @@ class RedirectTest
 {
 	/**
 	 * Exercise 8 - IO redirection
+	 *
 	 * @throws IOException Not thrown
 	 */
 	@Test
@@ -20,13 +21,14 @@ class RedirectTest
 	{
 		PrintStream console = System.out;
 		var baos = new ByteArrayOutputStream();
-		try (baos)
+		try (var ps = new PrintStream(baos);
+			 // Although ByteArrayOutputStream is a Closable, it doesn't actually do anything
+			 baos)
 		{
-			System.setOut(new PrintStream(baos));
+			System.setOut(ps);
 
 			for (int i = 1; i <= 5; i++)
 				System.out.printf("This is line '%d'%n", i);
-
 		}
 		finally
 		{
