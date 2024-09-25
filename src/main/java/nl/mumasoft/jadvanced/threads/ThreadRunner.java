@@ -39,5 +39,6 @@ public class ThreadRunner
 
 		System.out.println("In list: " + String.join(", ", list));
 		System.out.println("Actual results: " + String.join(", ", results));
+		System.out.println("Results size: " + results.size());
 	}
 }
