@@ -1,4 +1,4 @@
-package nl.mumasoft.jadvanced.threads;
+package nl.mumasoft.jadvanced.concurrency.threads;
 
 public class CounterThread extends Thread
 {

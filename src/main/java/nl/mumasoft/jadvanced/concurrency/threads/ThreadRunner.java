@@ -1,10 +1,14 @@
-package nl.mumasoft.jadvanced.threads;
+package nl.mumasoft.jadvanced.concurrency.threads;
 
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+/**
+ * This class demonstrates the use of a thread pool to execute a number of tasks while also demonstrating that
+ * an ArrayList is not thread safe.
+ */
 public class ThreadRunner
 {
 	public static void main(String[] args) throws ExecutionException, InterruptedException
