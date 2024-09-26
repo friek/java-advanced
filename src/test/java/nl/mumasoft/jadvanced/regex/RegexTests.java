@@ -2,7 +2,6 @@ package nl.mumasoft.jadvanced.regex;
 
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
