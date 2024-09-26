@@ -45,15 +45,10 @@ public class FileVisitor
 			if (!file.toString().endsWith(".java"))
 				return FileVisitResult.CONTINUE;
 
-			for (String line : Files.readAllLines(file))
+			if (Files.readAllLines(file).stream().anyMatch(line -> line.contains("public int")))
 			{
-				if (line.contains("public int"))
-				{
-					count++;
-					break;
-				}
+				count++;
 			}
-
 
 			return FileVisitResult.CONTINUE;
 		}
