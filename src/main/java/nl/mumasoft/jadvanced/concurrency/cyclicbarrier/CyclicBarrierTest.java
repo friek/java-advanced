@@ -17,17 +17,8 @@ public class CyclicBarrierTest
 		}
 	}
 
-	private static class Task implements Runnable
+	private record Task(String me, CyclicBarrier cb) implements Runnable
 	{
-		private final String me;
-		private final CyclicBarrier cb;
-
-		public Task(String me, CyclicBarrier cb)
-		{
-			this.me = me;
-			this.cb = cb;
-		}
-
 		@Override
 		public void run()
 		{
