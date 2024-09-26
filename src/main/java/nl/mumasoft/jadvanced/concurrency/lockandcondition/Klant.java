@@ -12,14 +12,5 @@ public class Klant
 	public void koop()
 	{
 		voorraad.decrement();
-		try
-		{
-			Thread.sleep(100);
-		}
-		catch (InterruptedException e)
-		{
-			throw new RuntimeException(e);
-		}
-
 	}
 }
