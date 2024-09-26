@@ -2,6 +2,7 @@ package nl.mumasoft.jadvanced.regex;
 
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
@@ -42,6 +43,19 @@ class RegexTests
 		// Invalid
 		for (var version : Arrays.asList("1.a.1", "0.1.0x", "1.1.1-alpha.1"))
 			assertFalse(p.matcher(version).matches());
+	}
+
+	@Test
+	void ipAddress()
+	{
+		var p = Pattern.compile("(([1-9]|1[0-9]|2[0-5])?[0-9]\\.){3}([1-9]|1[0-9]|2[0-5])?[0-9]");
+		// Valid
+		for (var ip : Arrays.asList("127.0.0.1", "192.168.0.1", "10.0.0.1"))
+			assertTrue(p.matcher(ip).matches());
+		// Invalid
+		for (var ip : Arrays.asList("327.0.0.1", "192.168.0", "1000.0.0.1"))
+			assertFalse(p.matcher(ip).matches());
+
 	}
 
 	@Test
