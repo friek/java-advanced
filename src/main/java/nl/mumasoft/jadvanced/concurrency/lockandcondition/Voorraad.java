@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Voorraad
 {
 	private static Voorraad instance;
-	private int voorraad;
+	private volatile int voorraad;
 	private final ReentrantLock lock = new ReentrantLock();
 	private final Condition herbevoorrading = lock.newCondition();
 
@@ -26,7 +26,7 @@ public class Voorraad
 		{
 			if (voorraad++ == 0)
 				herbevoorrading.signal();
-			System.out.println("Voorraad verhoogd naar " + this.voorraad);
+			System.out.println("Voorraad verhoogd naar " + voorraad);
 		}
 		finally
 		{
@@ -43,7 +43,7 @@ public class Voorraad
 				herbevoorrading.await();
 
 			voorraad--;
-			System.out.println("Voorraad verlaagd naar " + this.voorraad);
+			System.out.println("Voorraad verlaagd naar " + voorraad);
 		}
 		catch (InterruptedException e)
 		{

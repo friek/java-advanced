@@ -18,5 +18,7 @@ public class WinkelApplication
 				executor.execute(bakker::bakEnLever);
 			}
 		}
+
+		System.out.println("Got here");
 	}
 }
