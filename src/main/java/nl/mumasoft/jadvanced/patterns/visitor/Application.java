@@ -15,7 +15,7 @@ public class Application
 		fruitmand.add(new Pear());
 		fruitmand.add(new Banana());
 		fruitmand.add(new Banana());
-		visitor.visit(fruitmand);
+		fruitmand.accept(visitor);
 
 		System.out.println(visitor);
 	}
