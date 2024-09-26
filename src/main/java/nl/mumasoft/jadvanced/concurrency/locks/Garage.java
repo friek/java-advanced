@@ -26,7 +26,7 @@ public class Garage implements Iterable<ParkingSpot>
 		}
 		finally
 		{
-			lock.lock();
+			lock.unlock();
 		}
 	}
 
