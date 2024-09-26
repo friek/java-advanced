@@ -16,9 +16,17 @@ public class Garage implements Iterable<ParkingSpot>
 	 */
 	public void park(ParkingRequest parkingRequest)
 	{
-		for (var car : parkingRequest)
+		lock.lock();
+		try
 		{
-			park(car);
+			for (var car : parkingRequest)
+			{
+				park(car);
+			}
+		}
+		finally
+		{
+			lock.lock();
 		}
 	}
 

@@ -31,6 +31,7 @@ public class App
 				}
 			});
 		}
+
 		executorService.shutdown();
 		executorService.awaitTermination(10, TimeUnit.SECONDS);
 
