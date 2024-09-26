@@ -4,7 +4,7 @@ public class Application
 {
 	public static void main(String[] args)
 	{
-		Visitor visitor = new FruitCountingVisitor();
+		var visitor = new FruitCountingVisitor();
 
 		new Apple().accept(visitor);
 		new Banana().accept(visitor);
